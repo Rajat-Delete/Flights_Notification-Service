@@ -20,20 +20,20 @@ const mailsender = require('./config/email-config');
 app.listen(ServerConfig.PORT, async (req,res) =>{
     console.log(`App is running on the port no: ${ServerConfig.PORT}`);
     Logger.info("Successfully Started the Server",{})
-    try {
-    const response = await mailsender.sendMail({
-    from:ServerConfig.GMAIL_EMAIL,
-    to:'rajatsharma17398@gmail.com',
-    subject : 'Is this Service Working?',
-    text : 'For testing Purpose',
-    html : '<b>Hi Rajat, Your Flight is Booked!</b>'
-    });
+    // // try {
+    // // const response = await mailsender.sendMail({
+    // // from:ServerConfig.GMAIL_EMAIL,
+    // // to:'rajatsharma17398@gmail.com',
+    // // subject : 'Is this Service Working?',
+    // // text : 'For testing Purpose',
+    // // html : '<b>Hi Rajat, Your Flight is Booked!</b>'
+    // // });
 
-    console.log(response);
+    // // console.log(response);
 
-    } catch (error) {
-     console.log(error);   
-    }
+    // } catch (error) {
+    //  console.log(error);   
+    // }
     
 })
 
