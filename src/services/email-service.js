@@ -8,7 +8,7 @@ const ticketRepo = new TicketRepository();
 //This function will be used to send the email
 async function sendEmail(mailfrom , mailTo , subject,content){
     try {
-        const mailresponse = await mailsender.sendMail({
+        const mailresponse = await Mailer.sendMail({
         from: mailfrom,
         to:mailTo,
         subject : subject,
